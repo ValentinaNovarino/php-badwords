@@ -15,15 +15,22 @@
 
             ?>
         </p>
-        <h2>
-            BADWORD
-        </h2>
         <p>
+            Badword:
             <?php
 
             $badword = $_GET['badword'];
 
             echo $badword;
+
+            ?>
+        </p>
+        <p>
+            Paragrafo censurato:
+            <?php
+            $paragrafoCensurato = str_replace($badword, '***', $paragrafo);
+
+            echo $paragrafoCensurato;
             ?>
         </p>
     </body>
